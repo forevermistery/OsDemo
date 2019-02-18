@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/mll_item_about_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_item_about_safe_name"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="15dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/add_img"
+          android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_item_detail_softs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/mll_item_about_relate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_item_about_safe_relate"
+            android:text="推荐"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/img_detail_"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right"/>
+
+    </LinearLayout>
+      <Button
+          android:text="button"
+          android:id="@+id/ad_test_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+  </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

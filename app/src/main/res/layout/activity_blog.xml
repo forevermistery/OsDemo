@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <org.itheima.recycler.widget.ItheimaRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <org.itheima.recycler.header.RecyclerViewHeader
+                android:id="@+id/recycler_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+                    <RadioGroup
+                        android:id="@+id/rg_radioGroup"
+                        android:orientation="horizontal"
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/rb_lastest_recommand"
+                            android:checked="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                             android:button="@null"
+
+                            android:text="最新推荐"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textColor="#01741a"
+                            android:background="#c2c1c1"/>
+                        <RadioButton
+                            android:id="@+id/rb_week_hot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:text="本周热门"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textColor="#01741a"
+                            android:background="#c2c1c1"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_lastest_blog"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:button="@null"
+                            android:text="最新博客"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:textAlignment="center"
+                            android:textColor="#01741a"
+                            android:background="#c2c1c1"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+            </org.itheima.recycler.header.RecyclerViewHeader>
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

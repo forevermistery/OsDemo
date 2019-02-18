@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+
+        android:id="@+id/btn_home"
+        android:layout_centerInParent="true"
+        android:background="#bcbcbc"
+        android:text="首页"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_blog"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_home"
+            android:background="#bcbcbc"
+            android:text="博客" />
+
+        <Button
+            android:id="@+id/btn_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/btn_home"
+            android:background="#bcbcbc"
+            android:text="C" />
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/main_title_bar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_change_one_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="674dp">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <org.itheima.recycler.widget.ItheimaRecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <org.itheima.recycler.header.RecyclerViewHeader
+                        android:id="@+id/recycler_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|top">
+
+                        <com.itheima.loopviewpager.LoopViewPager
+                            android:id="@+id/lvp_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:animStyle="accordion"
+                            app:animTime="1000"
+                            app:loopTime="3000">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="#55000000"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <com.itheima.loopviewpager.LoopTitleView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:maxLines="1"
+                                    android:textColor="#FF0000"
+                                    android:textSize="16sp" />
+
+                                <com.itheima.loopviewpager.LoopDotsView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    app:dotShape="oval"
+                                    app:dotSize="10dp" />
+
+                            </LinearLayout>
+
+                        </com.itheima.loopviewpager.LoopViewPager>
+                    </org.itheima.recycler.header.RecyclerViewHeader>
+                </FrameLayout>
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

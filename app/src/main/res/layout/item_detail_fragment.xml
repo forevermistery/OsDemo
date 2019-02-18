@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ScrollViewCount">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <LinearLayout
+        android:id="@+id/ll_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:textSize="24sp"
+            android:id="@+id/tv_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="author" />
+
+        <TextView
+            android:id="@+id/tv_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-01-01" />
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ScrollView
+        android:id="@+id/sw_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout">
+
+    <com.example.administrator.osdemo.oschina.NoScrollWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+    </com.example.administrator.osdemo.oschina.NoScrollWebView>
+    </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mll_detail_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/can_change_text"
+            android:text="相关软件"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mll_detail_recommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="相关推荐"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="评论"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/new_detail_comment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<include layout="@layout/lay_comment_item_ex"/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
